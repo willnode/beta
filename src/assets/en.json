@@ -1,0 +1,33 @@
+{
+	"display": "EN",
+	"captions": {
+		"modes": "View my profile as"
+	},
+	"welcome": {
+		"modes": [{
+			"name": "Hobbyist",
+			"caption": "I enjoy part of my free time with writing blogs, traveling into places, and get a good collection of photos",
+			"aspects": [
+				"Writing",
+				"Traveling",
+				"Photography"
+			]
+		}, {
+			"name": "Developer",
+			"caption": "For 10 years of programming I've been enraveling with many desktop, web, game and art projects",
+			"aspects": [
+				"Desktop",
+				"Web",
+				"Game/Art"
+			]
+		}, {
+			"name": "Business",
+			"caption": "I run part of businesses from selling digital assets into freelancing to sustain my academic and many parts of my life",
+			"aspects": [
+				"Asset Publisher (Unity)",
+				"Freelancing (Hire Me!)",
+				"General Support (GitHub)"
+			]
+		}]
+	}
+}

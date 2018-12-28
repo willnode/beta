@@ -1,0 +1,33 @@
+{
+	"display": "ID",
+	"captions": {
+		"modes": "Lihat profil saya dalam hal"
+	},
+	"welcome": {
+		"modes":  [{
+			"name": "Hobi",
+			"caption": "Aku suka mengisi waktu luang dengan mengisi waku dengan menulis artikel, menjelajahi tempat, dan mengabadikan banyak koleksi dalam foto",
+			"aspects": [
+				"Menulis",
+				"Menjelajah",
+				"Fotografi"
+			]
+		}, {
+			"name": "Pengembang",
+			"caption": "Selama 10 tahun dalam programming aku telah menjelajahi banyak project aplikasi desktop, web, game dan desain",
+			"aspects": [
+				"Desktop",
+				"Web",
+				"Game/Art"
+			]
+		}, {
+			"name": "Bisnis",
+			"caption": "I run part of businesses from selling digital assets into freelancing to sustain my academic and many parts of my life",
+			"aspects": [
+				"Asset Publisher (Unity)",
+				"Freelancing (Hire Me!)",
+				"General Support (GitHub)"
+			]
+		}]
+	}
+}
