@@ -12,18 +12,7 @@ canvas {
 <script>
 var canvas, can_w, can_h, ctx;
 
-// console.log(typeof can_w);
-
 var
-//    ball = {
-//       x: 0,
-//       y: 0,
-//       vx: 0,
-//       vy: 0,
-//       r: 0,
-//       alpha: 1,
-//       phase: 0
-//    },
    ball_color = {
        r: 255,
        g: 255,
@@ -227,8 +216,8 @@ function initBalls(num){
 }
 // Init Canvas
 function initCanvas(){
-    canvas.setAttribute('width', window.innerWidth);
-    canvas.setAttribute('height', window.innerHeight);
+    canvas.setAttribute('width', document.body.scrollWidth);
+    canvas.setAttribute('height', document.body.scrollHeight);
 
     can_w = parseInt(canvas.getAttribute('width'));
     can_h = parseInt(canvas.getAttribute('height'));

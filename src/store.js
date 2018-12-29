@@ -10,6 +10,7 @@ var store = new Vuex.Store({
     lang: localStorage['site-lang'],
     locale: localStorage['site-lang'] == 1 ? ID : EN,
     scheme: "#07c",
+    schemes: ["#07c","#c70","#70c","#0c7"],
     mode: -1
   },
   mutations: {
