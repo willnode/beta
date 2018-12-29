@@ -1,33 +1,17 @@
 {
 	"display": "EN",
 	"captions": {
-		"modes": "View my profile as"
+		"modes": "View my profile as",
+		"home": "Home"
 	},
-	"welcome": {
-		"modes": [{
-			"name": "Hobbyist",
-			"caption": "I enjoy part of my free time with writing blogs, traveling into places, and get a good collection of photos",
-			"aspects": [
-				"Writing",
-				"Traveling",
-				"Photography"
-			]
-		}, {
-			"name": "Developer",
-			"caption": "For 10 years of programming I've been enraveling with many desktop, web, game and art projects",
-			"aspects": [
-				"Desktop",
-				"Web",
-				"Game/Art"
-			]
-		}, {
-			"name": "Business",
-			"caption": "I run part of businesses from selling digital assets into freelancing to sustain my academic and many parts of my life",
-			"aspects": [
-				"Asset Publisher (Unity)",
-				"Freelancing (Hire Me!)",
-				"General Support (GitHub)"
-			]
-		}]
-	}
+	"modes": [{
+		"name": "🎨 Hobby Enthusiast",
+		"caption": "My bio including academics, articles, blogs, quotes, jokes, favorite music, novel, movies, and many personal stuff."
+	}, {
+		"name": "💻 Geekie Developer",
+		"caption": "All about programming as my primary skill. And many collections from simple console to interactive web and gaming arts."
+	}, {
+		"name": "🤵 Business Relations",
+		"caption": "Products that I sell and giveaway, inquiries from supports and questions, and my CV if you have an interest to hire me."
+	}]
 }

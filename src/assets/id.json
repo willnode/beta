@@ -1,33 +1,17 @@
 {
 	"display": "ID",
 	"captions": {
-		"modes": "Lihat profil saya dalam hal"
+		"modes": "Lihat profil saya sebagai",
+		"home": "Beranda"
 	},
-	"welcome": {
-		"modes":  [{
-			"name": "Hobi",
-			"caption": "Aku suka mengisi waktu luang dengan mengisi waku dengan menulis artikel, menjelajahi tempat, dan mengabadikan banyak koleksi dalam foto",
-			"aspects": [
-				"Menulis",
-				"Menjelajah",
-				"Fotografi"
-			]
-		}, {
-			"name": "Pengembang",
-			"caption": "Selama 10 tahun dalam programming aku telah menjelajahi banyak project aplikasi desktop, web, game dan desain",
-			"aspects": [
-				"Desktop",
-				"Web",
-				"Game/Art"
-			]
-		}, {
-			"name": "Bisnis",
-			"caption": "I run part of businesses from selling digital assets into freelancing to sustain my academic and many parts of my life",
-			"aspects": [
-				"Asset Publisher (Unity)",
-				"Freelancing (Hire Me!)",
-				"General Support (GitHub)"
-			]
-		}]
-	}
+	"modes": [{
+		"name": "🎨 Penikmat Hobi",
+		"caption": "Bio saya termasuk akademis, artikel, blog, kutipan, candaan, favorit musik, novel, film, dan banyak hal pribadi lainnya."
+	}, {
+		"name": "💻 Pengembang Maniak",
+		"caption": "Semua hal tentang programming sebagai skill utama saya. Termasuk koleksi software dari konsol sederhana hingga web dan desain game interaktif"
+	}, {
+		"name": "🤵 Relasi Bisnis",
+		"caption": "Produk yang saya jual dan bagi percuma, kueri dari dukungan dan pertanyaan, dan CV saya jika anda sedang mencari rektrutan baru."
+	}]
 }
