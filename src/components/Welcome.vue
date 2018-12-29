@@ -1,15 +1,15 @@
 <template>
-  <div id="welcome" class="flex-grow-1 d-flex flex-column justify-content-center">
+  <div id="welcome" class="flex-grow-1 d-flex flex-column justify-content-center p-5">
     <div>
       <img class="z-front rounded-circle" width="200px" src="https://avatars1.githubusercontent.com/u/20214420">
     </div>
     <h1 class="my-3">Wildan Mubarok</h1>
     <span class="font-italic">{{locale.captions.modes}}</span>
-    <div class="btn-group my-3 mx-5 z-front" @mouseenter="autohighlight=false" @mouseleave="autohighlight=true;highlighted=-4">
+    <div class="btn-group my-3 z-front" @mouseenter="autohighlight=false" @mouseleave="autohighlight=true;highlighted=-4">
       <button @click="mode = i" class="btn btn-outline-light" :class="{ active: highlighted == i }" v-for="(m, i) in locale.modes"
       :key="m.name" @mouseenter="highlighted = i">{{m.name}}</button>
     </div>
-    <div style="height:50px" class="d-flex">
+    <div style="height:50px" class="d-flex justify-content-center">
       <span class="font-weight-light font-italic">{{highlighted >= 0 ? locale.modes[highlighted].caption : '-'}}</span>
     </div>
     <!--div v-if="mode >= 0">
