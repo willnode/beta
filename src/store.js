@@ -10,8 +10,11 @@ var store = new Vuex.Store({
     lang: localStorage['site-lang'],
     locale: localStorage['site-lang'] == 1 ? ID : EN,
     scheme: "#07c",
-    schemes: ["#07c","#c70","#70c","#0c7"],
-    mode: -1
+    schemes: ["#07c","#c70","#70c","#c07"],
+    mode: -1,
+    img: process.env.NODE_ENV === 'production'
+	  ? 'https://res.cloudinary.com/wellosoft/image/upload/home/' // prod
+	  : '//localhost:9000/home/', // dev
   },
   mutations: {
     changeLang(state, mode) {

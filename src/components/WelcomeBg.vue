@@ -195,7 +195,8 @@ function render(){
 
     addBallIfy();
 
-    window.requestAnimationFrame(render);
+    if (store.state.mode == -1)
+        window.requestAnimationFrame(render);
 }
 
 // Init Balls
@@ -222,6 +223,8 @@ function initCanvas(){
     can_w = parseInt(canvas.getAttribute('width'));
     can_h = parseInt(canvas.getAttribute('height'));
 }
+
+import store from '../store';
 
 function goMovie(){
     initCanvas();

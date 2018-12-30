@@ -1,16 +1,17 @@
 <template>
-  <div id="app" :style="{ 'background': scheme }">
+  <div id="app" :style="{ 'background': schemebg, '--app-scheme':scheme , '--app-scheme-dark':schemedark }">
     <Navbar/>
     <WelcomeBg v-if="mode == -1"/>
-    <Welcome v-if="mode == -1"/>
-    <Hoby v-if="mode == 0"/>
-    <Dev v-if="mode == 1"/>
-    <Pro v-if="mode == 2"/>
+    <Welcome v-if="mode == -1"  class="animated fadeIn fast"/>
+    <Hoby v-if="mode == 0"  class="animated fadeInUp faster"/>
+    <Dev v-if="mode == 1"  class="animated fadeInUp faster"/>
+    <Pro v-if="mode == 2"  class="animated fadeInUp faster"/>
   </div>
 </template>
 
 <script>
 import BootstrapCSS from 'bootstrap/dist/css/bootstrap.min.css'
+import AnimateCSS from 'animate.css/animate.min.css'
 import Navbar from './components/Navbar.vue'
 import Welcome from './components/Welcome.vue'
 import WelcomeBg from './components/WelcomeBg.vue'
@@ -20,7 +21,7 @@ import Pro from './components/Pro.vue'
 import store from './store'
 import chroma from 'chroma-js'
 
-document.createElement("style").nodeValue = BootstrapCSS;
+document.createElement("style").nodeValue = BootstrapCSS + '\n' + AnimateCSS;
 
 export default {
   name: 'app',
@@ -38,11 +39,19 @@ export default {
       get() { return store.state.mode; },
       set(v) { store.state.mode = v; }
     },
-    scheme() {
+    schemebg() {
       var sch = chroma(store.state.scheme);
       var ret = `linear-gradient(45deg, ${sch.darken(4).hex()}, ${sch.hex()})`;
       return ret;
-    }
+    },
+    scheme: {
+      get() { return store.state.scheme; },
+      set(v) { store.state.scheme = v; }
+    },
+    schemedark() {
+      var sch = chroma(store.state.scheme);
+      return sch.darken(4).hex();
+    },
   }
 }
 </script>
@@ -59,5 +68,9 @@ export default {
 
 html, body, #app {
  min-height: 100vh;
+}
+
+.btn-flat {
+  border-radius: 0px !important;
 }
 </style>
