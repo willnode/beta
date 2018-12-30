@@ -10,11 +10,22 @@ var store = new Vuex.Store({
     lang: localStorage['site-lang'],
     locale: localStorage['site-lang'] == 1 ? ID : EN,
     scheme: "#07c",
-    schemes: ["#07c","#c70","#70c","#c07"],
     mode: -1,
-    img: process.env.NODE_ENV === 'production'
-	  ? 'https://res.cloudinary.com/wellosoft/image/upload/home/' // prod
-	  : '//localhost:9000/home/', // dev
+    utils: {
+      schemes: ["#07c","#c70","#70c","#c07"],
+      img: process.env.NODE_ENV === 'production'
+        ? 'https://res.cloudinary.com/wellosoft/image/upload/home/' // prod
+        : '//localhost:9000/home/', // dev,
+      get(uri, cb) {
+          var oReq = new XMLHttpRequest();
+          oReq.addEventListener("load", function onload() {
+            cb(this.responseText);
+          });
+          oReq.open("GET", uri);
+          oReq.send();
+        },
+    }
+
   },
   mutations: {
     changeLang(state, mode) {

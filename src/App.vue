@@ -73,4 +73,48 @@ html, body, #app {
 .btn-flat {
   border-radius: 0px !important;
 }
+
+.btn-social {
+  margin: 2em;
+  padding: 1rem;
+}
+
+.btn-social svg {
+  fill: var(--fill);
+  width: 40px;
+  margin-right: 10px;
+}
+.btn-social:hover svg {
+  fill: white;
+}
+
+.btn-social:hover {
+  background-color: var(--fill);
+}
+
+h2 {
+  margin: 2rem 0;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-overlay {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--grad-up), var(--grad-down));
+  text-align: center;
+  align-items: center;
+  padding: 5rem;
+  display: flex;
+}
+
+.hero-overlay > div {
+  width: 100%;
+}
+
 </style>

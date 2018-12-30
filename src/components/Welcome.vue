@@ -41,7 +41,7 @@ export default {
       return store.state.locale.modes[this.mode];
     },
     schemes() {
-      return store.state.schemes;
+      return store.state.utils.schemes;
     },
     mode: {
       get() { return store.state.mode; },
@@ -55,8 +55,8 @@ export default {
     return {
       highlighted: -1,
       autohighlight: true,
-      img: (uri) => store.state.img + uri,
-      imgbg: (uri) => `url(${store.state.img + uri})`,
+      img: (uri) => store.state.utils.img + uri,
+      imgbg: (uri) => `url(${store.state.utils.img + uri})`,
       istoonarrow: window.innerWidth < 500
     }
   }, mounted() {
