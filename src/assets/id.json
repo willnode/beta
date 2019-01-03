@@ -5,13 +5,47 @@
 		"home": "Beranda"
 	},
 	"modes": [{
-		"name": "🎨 Penikmat Hobi",
+		"name": "👍 Penduduk Internet",
 		"caption": "Bio saya termasuk akademis, artikel, blog, kutipan, candaan, favorit musik, novel, film, dan banyak hal pribadi lainnya."
 	}, {
 		"name": "💻 Pengembang Maniak",
 		"caption": "Semua hal tentang programming sebagai skill utama saya. Termasuk koleksi software dari konsol sederhana hingga web dan desain game interaktif"
 	}, {
 		"name": "🤵 Relasi Bisnis",
-		"caption": "Produk yang saya jual dan bagi percuma, kueri dari dukungan dan pertanyaan, dan CV saya jika anda sedang mencari rektrutan baru."
+		"caption": "Produk yang saya jual dan bagi secara percuma, kueri dari dukungan dan pertanyaan, dan CV saya jika anda sedang mencari rektrutan baru."
+	}],
+	"hoby": [{
+		"title": "Siapa Aku?",
+		"caption": "Nama saya adalah Wildan Mubarok dan saya adalah software developer asal Indonesia yang suka bereksperimen dan menjelajahi hal baru."
+	}, {
+		"title": "Akademik",
+		"caption": "Saya mengikuti studi lanjut di Universitas Trunojoyo sebagai mahasiswa Teknik Informatika sejak pertengahan 2018."
+	}, {
+		"title": "Memo",
+		"caption": "Catatan pribadi untuk masa lalu, sekarang, dan nanti.",
+		"more": "Lihat Lebih banyak"
+	}, {
+		"title": "Timeline",
+		"caption": "Event-event penting, lebih seperti ke catatan pribadi.",
+		"lists": {
+			"Feb 2000": "Lahir di Gresik, ID",
+			"Apr 2001": "Pindah Kota ke ranah Jombang",
+			"Jul 2005": "Hari pertama Taman kanak-kanak",
+			"Des 2010": "Juara Akademik pertama (bangku 5 MI)",
+			"Mei 2014": "Lulus dari bangku MTsN Denanyar",
+			"Des 2015": "Finalis dari M-Edukasi Kemdikbud 2015",
+			"Mei 2017": "Lulus dari bangku MAN 4 Jombang",
+			"Aug 2018": "Masuk hari pertama sebagai mahasiswa TIF di UTM",
+			"Des 2018": "Touring solo pertama pulau Madura"
+		}
+	}, {
+		"title": "Akun Sosial",
+		"caption": "Suka kepo? Jelajahi akun sosial saya."
+	}],
+	"pro": [{
+		"title": "Kontak Saya?",
+		"support": "Gunakan email ini untuk pertanyaan tentang produk dan project yang ada di GitHub, Unity Asset Store, maupun platform lain",
+		"alias": "Gunakan email ini untuk hal umum lainnya seperti event, promosi, tawaran, dsb.",
+		"hint": "Tenang, Kedua email masuk ke inbox dan prioritas yang sama."
 	}]
 }

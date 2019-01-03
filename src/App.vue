@@ -12,6 +12,7 @@
 <script>
 import BootstrapCSS from 'bootstrap/dist/css/bootstrap.min.css'
 import AnimateCSS from 'animate.css/animate.min.css'
+import BalloonCSS from 'balloon-css/balloon.min.css'
 import Navbar from './components/Navbar.vue'
 import Welcome from './components/Welcome.vue'
 import WelcomeBg from './components/WelcomeBg.vue'
@@ -21,7 +22,7 @@ import Pro from './components/Pro.vue'
 import store from './store'
 import chroma from 'chroma-js'
 
-document.createElement("style").nodeValue = BootstrapCSS + '\n' + AnimateCSS;
+document.createElement("style").nodeValue = BootstrapCSS + '\n' + AnimateCSS + '\n' + BalloonCSS;
 
 export default {
   name: 'app',
@@ -79,6 +80,10 @@ html, body, #app {
   padding: 1rem;
 }
 
+.btn-social:hover {
+  color: white;
+}
+
 .btn-social svg {
   fill: var(--fill);
   width: 40px;
@@ -115,6 +120,10 @@ h2 {
 
 .hero-overlay > div {
   width: 100%;
+}
+
+.z-front {
+  z-index: 1;
 }
 
 </style>

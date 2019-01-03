@@ -5,13 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta name="author" content="Wildan Mubarok">
+    <meta name="description" content="Welcome to the personal site of Wildan Mubarok! Available in 2 languanges.">
+    <meta name="theme-color" content="#07c" />
     <title>WillNode's CV</title>
+    <style>
+      .notice {
+        text-align: center;
+        font-size: 3em;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        padding: 0;
+        display: block;
+        color: gray;
+      }
+    </style>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but home-new doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong class="notice">Need Javascript to run this page, sorry :(</strong>
+      <style>#loading-notice{display: none;}</style>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app"><strong id="loading-notice" class="notice">🔁 Loading Files...</strong></div>
   </body>
 </html>

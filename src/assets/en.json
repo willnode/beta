@@ -5,7 +5,7 @@
 		"home": "Home"
 	},
 	"modes": [{
-		"name": "🎨 Hobby Enthusiast",
+		"name": "👍 Stranger on Internet",
 		"caption": "My bio including academics, articles, blogs, quotes, jokes, favorite music, novel, movies, and many personal stuff."
 	}, {
 		"name": "💻 Geekie Developer",
@@ -13,5 +13,25 @@
 	}, {
 		"name": "🤵 Business Relations",
 		"caption": "Products that I sell and giveaway, inquiries from supports and questions, and my CV if you have an interest to hire me."
+	}],
+	"hoby": [{
+		"title": "Who am I?",
+		"caption": "My name is Wildan Mubarok and I'm a software developer from Indonesia who likes to experiment and exploring new things."
+	}, {
+		"title": "Academics",
+		"caption": "I currently studiyng in Trunojoyo University as Information Engineering Undergraduate student from mid 2018."
+	}, {
+		"title": "Memo",
+		"caption": "My personal notes for past, present, and future.",
+		"more": "See more"
+	}, {
+		"title": "Social Accounts",
+		"caption": "Love to see more? Surf my social account."
+	}],
+	"pro": [{
+		"title": "My Contacts?",
+		"support": "Use this email to ask about GitHub projects or supports for Unity Asset Products, or in other platforms",
+		"alias": "Use this email for other general stuff like events, promotions, offers, etc.",
+		"hint": "No worry, Both email delivers to the same inbox and priority."
 	}]
 }

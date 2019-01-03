@@ -3,24 +3,24 @@
   <div class="hero" :style="{ 'background-image':imgbg('me-backside.jpg')}">
     <div class="hero-overlay" style="--grad-up: #530f; --grad-down: #5300">
       <div>
-        <h2>Siapa Aku?</h2>
-        <p>Nama saya adalah Wildan Mubarok dan saya adalah software developer asal Indonesia yang suka bereksperimen dan menjelajahi hal baru.</p>
+        <h2>{{locale[0].title}}</h2>
+        <p>{{locale[0].caption}}</p>
       </div>
     </div>
   </div>
   <div class="hero" :style="{ 'background-image':imgbg('me-withalma.jpg')}">
     <div class="hero-overlay" style="--grad-up: #0530; --grad-down: #053f">
       <div class="align-self-end">
-        <h2>Akademik</h2>
-        <p>Saya mengikuti studi lanjut di Universitas Trunojoyo sebagai mahasiswa Teknik Informatika sejak pertengahan 2018.</p>
+        <h2>{{locale[1].title}}</h2>
+        <p>{{locale[1].caption}}</p>
       </div>
     </div>
   </div>
   <div class="hero" :style="{ 'background-image':imgbg('me-lovecloud.jpg')}">
     <div class="hero-overlay" style="--grad-up: #0350; --grad-down: #035f">
       <div class="align-self-end">
-        <h2>Memo</h2>
-        <p>Catatan pribadi untuk masa lalu, sekarang, dan nanti</p>
+        <h2>{{locale[2].title}}</h2>
+        <p>{{locale[2].caption}}</p>
         <div class="btn-group-vertical">
           <a class="btn btn-outline-light text-left" v-for="m in memos" :key="m.uri" :href="m.uri" >
               <img :src="m.ig + 'media?size=t'" class="clearfix" width="40px">
@@ -29,8 +29,21 @@
               </span>
           </a>
           <a class="btn btn-outline-light" href="https://memo.wellosoft.net/">
-            Lihat Lebih banyak
+            <i>Lihat Lebih banyak</i>
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero" :style="{ 'background-image':imgbg('me-sunshine.jpg')}">
+    <div class="hero-overlay" style="--grad-up: #0350; --grad-down: #351f">
+      <div class="align-self-end">
+        <h2>{{locale[3].title}}</h2>
+        <p>{{locale[3].caption}}</p>
+        <div class="btn-group-vertical">
+          <button class="btn btn-outline-light text-left p-0 pr-3" v-for="(m,k) in locale[3].lists" :key="k" >
+              <span class="d-inline-block font-weight-bold text-right btn-success px-2 py-1" style="width:100px">{{k}}</span> -- {{m}}
+          </button>
         </div>
       </div>
     </div>
@@ -38,9 +51,10 @@
   <div class="hero" :style="{ 'background-image':imgbg('me-backcloud.jpg')}">
     <div class="hero-overlay" style="--grad-up: #5030; --grad-down: #503f">
       <div class="align-self-center">
-        <h2>Akun Sosial</h2>
-          <a class="btn btn-outline-light btn-social" href="https://twitter.com/willnode" style="--fill: #1DA1F2"><IconTwitter/>Twitter</a>
-          <a class="btn btn-outline-light btn-social" href="https://instagram.com/willn0de" style="--fill: #E4405F"><IconInstagram/>Instagram</a>
+        <h2>{{locale[4].title}}</h2>
+        <p>{{locale[4].caption}}</p>
+        <a class="btn btn-outline-light btn-social" href="https://twitter.com/willnode" style="--fill: #1DA1F2"><IconTwitter/>Twitter</a>
+        <a class="btn btn-outline-light btn-social" href="https://instagram.com/willn0de" style="--fill: #E4405F"><IconInstagram/>Instagram</a>
       </div>
       </div>
     </div>
@@ -56,6 +70,11 @@ export default {
   components: {
     IconTwitter,
     IconInstagram
+  },
+  computed: {
+    locale() {
+      return store.state.locale.hoby;
+    }
   },
   data() {
   return {

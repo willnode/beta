@@ -16,9 +16,7 @@
 </template>
 
 <style scoped>
-#welcome {
-  z-index: 1
-}
+
 .schemed.active, .schemed:hover {
   background-color: var(--scheme-color) !important;
   color: white !important;
