@@ -1,58 +1,27 @@
 <template>
   <div id="dev">
-    <div class="hero" :style="{ 'background-image':imgbg('me-backside.jpg')}">
-      <div class="hero-overlay" style="--grad-up: #530f; --grad-down: #5300">
-        <div>
-          <h2>Semua tentang Desain dan Algoritma</h2>
-          <p>Hi! Saya adalah Wildan Mubarok dan saya adalah developer yang menyukai
-            Desain dan membangun algoritma dibaliknya, mulai dari Web Front-End hingga
-            Game Platform.</p>
-        </div>
-      </div>
-    </div>
-  <div class="hero" :style="{ 'background-image':imgbg('me-lovecloud.jpg')}">
-    <div class="hero-overlay" style="--grad-up: #0350; --grad-down: #035f">
-      <div class="align-self-end">
-        <h2>Blog</h2>
-        <p>Artikel membahas seputar developing web dan game terkumpul disini</p>
-        <div class="btn-group-vertical">
-        <a class="btn btn-outline-light" v-for="m in blogs" :key="m.uri" :href="m.uri" >
-          <span class="ml-2 d-inline-block">
-            {{m.title}}
-          </span>
-        </a>
-        <a class="btn btn-outline-light" href="https://blog.wellosoft.net/">
-          <i>Lihat Lebih banyak</i>
-        </a>
-        </div>
-      </div>
-    </div>
+    <hero image="me-backside.jpg" :title="locale[0].title" :caption="locale[0].caption"
+    overlay="linear-gradient(#530f, #5300)" />
+   <hero image="me-lovecloud.jpg" :title="locale[1].title" :caption="locale[1].caption"
+    overlay="linear-gradient(#0350, #035f)" align="align-self-end" :attachment="{
+      name: 'lists', args: { list: blogs,
+        more: {uri: 'https://blog.wellosoft.net/', caption: locale[1].more},
+      }}"/>
+  <hero image="me-backcloud.jpg" :title="locale[2].title" :caption="locale[2].caption"
+    overlay="linear-gradient(#5030, #503f)" align="align-self-center" :attachment="{ name: 'social', args: [
+    { title: 'Codepen', url: 'https://codepen.com/willnode', color: '#000000' },
+    { title: 'GitHub', url: 'https://github.com/willnode', color: '#E4405F' },
+    { title: 'Artstation', url: 'https://artstation.com/willnode', color: '#1DA1F2' }]}"/>
   </div>
-  <div class="hero" :style="{ 'background-image':imgbg('me-backcloud.jpg')}">
-    <div class="hero-overlay" style="--grad-up: #5030; --grad-down: #503f">
-      <div class="align-self-center">
-        <h2>Akon Showcase</h2>
-        <p>Showcase Web Front-End dan Art Lainnya</p>
-        <a class="btn btn-outline-light btn-social" href="https://artstation.com/willnode" style="--fill: #13AFF0"><IconArtstation/>Artstation</a>
-        <a class="btn btn-outline-light btn-social" href="https://github.com/willnode" style="--fill: #181717"><IconGithub/>GitHub</a>
-        <a class="btn btn-outline-light btn-social" href="https://codepen.com/willnode" style="--fill: #000000"><IconCodepen/>Codepen</a>
-      </div>
-    </div>
-  </div>
-</div>
 </template>
 
 <script>
 import store from '../store'
-import IconArtstation from '../icons/artstation.svg'
-import IconCodepen from '../icons/codepen.svg'
-import IconGithub from '../icons/github.svg'
+import Hero from './widgets/Hero.vue'
 
 export default {
   components: {
-    IconArtstation,
-    IconCodepen,
-    IconGithub,
+    Hero
   },
   computed: {
     locale() {

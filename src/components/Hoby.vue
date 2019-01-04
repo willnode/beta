@@ -1,75 +1,31 @@
 <template>
   <div id="hoby">
-  <div class="hero" :style="{ 'background-image':imgbg('me-backside.jpg')}">
-    <div class="hero-overlay" style="--grad-up: #530f; --grad-down: #5300">
-      <div>
-        <h2>{{locale[0].title}}</h2>
-        <p>{{locale[0].caption}}</p>
-      </div>
-    </div>
-  </div>
-  <div class="hero" :style="{ 'background-image':imgbg('me-withalma.jpg')}">
-    <div class="hero-overlay" style="--grad-up: #0530; --grad-down: #053f">
-      <div class="align-self-end">
-        <h2>{{locale[1].title}}</h2>
-        <p>{{locale[1].caption}}</p>
-      </div>
-    </div>
-  </div>
-  <div class="hero" :style="{ 'background-image':imgbg('me-lovecloud.jpg')}">
-    <div class="hero-overlay" style="--grad-up: #0350; --grad-down: #035f">
-      <div class="align-self-end">
-        <h2>{{locale[2].title}}</h2>
-        <p>{{locale[2].caption}}</p>
-        <div class="btn-group-vertical">
-          <a class="btn btn-outline-light text-left" v-for="m in memos" :key="m.uri" :href="m.uri" >
-              <img :src="m.ig + 'media?size=t'" class="clearfix" width="40px">
-              <span class="ml-2 d-inline-block">
-                {{m.title}}
-              </span>
-          </a>
-          <a class="btn btn-outline-light" href="https://memo.wellosoft.net/">
-            <i>Lihat Lebih banyak</i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero" :style="{ 'background-image':imgbg('me-sunshine.jpg')}">
-    <div class="hero-overlay" style="--grad-up: #0350; --grad-down: #351f">
-      <div class="align-self-end">
-        <h2>{{locale[3].title}}</h2>
-        <p>{{locale[3].caption}}</p>
-        <div class="btn-group-vertical">
-          <button class="btn btn-outline-light text-left p-0 pr-3" v-for="(m,k) in locale[3].lists" :key="k" >
-              <span class="d-inline-block font-weight-bold text-right btn-success px-2 py-1" style="width:100px">{{k}}</span> -- {{m}}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero" :style="{ 'background-image':imgbg('me-backcloud.jpg')}">
-    <div class="hero-overlay" style="--grad-up: #5030; --grad-down: #503f">
-      <div class="align-self-center">
-        <h2>{{locale[4].title}}</h2>
-        <p>{{locale[4].caption}}</p>
-        <a class="btn btn-outline-light btn-social" href="https://twitter.com/willnode" style="--fill: #1DA1F2"><IconTwitter/>Twitter</a>
-        <a class="btn btn-outline-light btn-social" href="https://instagram.com/willn0de" style="--fill: #E4405F"><IconInstagram/>Instagram</a>
-      </div>
-      </div>
-    </div>
+  <hero image="me-backside.jpg" :title="locale[0].title" :caption="locale[0].caption"
+    overlay="linear-gradient(#530f, #5300)" />
+  <hero image="me-withalma.jpg" :title="locale[1].title" :caption="locale[1].caption"
+    overlay="linear-gradient(#0530, #053f)" align="align-self-end"/>
+  <hero image="me-lovecloud.jpg" :title="locale[2].title" :caption="locale[2].caption"
+    overlay="linear-gradient(#0356, #035f)" align="align-self-end" :attachment="{
+      name: 'lists', args: { list: memos,
+        more: {uri: 'https://memo.wellosoft.net/', caption: 'Lihat Lebih banyak'},
+      }}"/>
+  <hero image="me-sunshine.jpg" :title="locale[3].title" :caption="locale[3].caption"
+    overlay="linear-gradient(#0355, #550f)" align="align-self-end" :attachment="{
+      name: 'timeline', args: locale[3].lists}"/>
+  <hero image="me-backcloud.jpg" :title="locale[4].title" :caption="locale[4].caption"
+    overlay="linear-gradient(#5030, #503f)" align="align-self-center" :attachment="{ name: 'social', args: [
+    { title: 'Twitter', url: 'https://twitter.com/willnode', color: '#1DA1F2' },
+    { title: 'Instagram', url: 'https://instagram.com/willn0de', color: '#E4405F' }]}"/>
   </div>
 </template>
 
 <script>
 import store from '../store'
-import IconTwitter from '../icons/twitter.svg'
-import IconInstagram from '../icons/instagram.svg'
+import Hero from './widgets/Hero.vue'
 
 export default {
   components: {
-    IconTwitter,
-    IconInstagram
+    Hero
   },
   computed: {
     locale() {

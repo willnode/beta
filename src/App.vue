@@ -106,6 +106,7 @@ h2 {
   width: 100%;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .hero-overlay {

@@ -25,8 +25,33 @@
 		"caption": "My personal notes for past, present, and future.",
 		"more": "See more"
 	}, {
+		"title": "Timeline",
+		"caption": "Important events, this more like to personal notes.",
+		"lists": {
+			"Feb 2000": "Born in Gresik, ID",
+			"Apr 2001": "Move to new city Jombang",
+			"Jul 2005": "First day kinderganten",
+			"Dec 2010": "First win in academics (Fifth grade)",
+			"May 2014": "Graduated from mid-school MTsN Denanyar",
+			"Dec 2015": "Finalist of M-Edukasi Kemdikbud 2015",
+			"May 2017": "Graduated from MAN 4 Jombang",
+			"Aug 2018": "First day as undergraduate student of IE in UTM",
+			"Dec 2018": "First Solo touring in Madura island"
+		}
+	}, {
 		"title": "Social Accounts",
 		"caption": "Love to see more? Surf my social account."
+	}],
+	"dev": [{
+		"title": "Semua tentang Desain dan Algoritma",
+		"caption": "Hi! Saya adalah Wildan Mubarok dan saya adalah developer yang menyukai Desain dan membangun algoritma dibaliknya, mulai dari Web Front-End hingga Game Platform."
+	}, {
+		"title": "Blog",
+		"caption": "Artikel membahas seputar developing web dan game terkumpul disini",
+		"more": "Lihat Lebih banyak"
+	}, {
+		"title": "Akon Showcase",
+		"caption": "Showcase Web Front-End dan Art Lainnya"
 	}],
 	"pro": [{
 		"title": "My Contacts?",

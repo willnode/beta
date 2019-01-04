@@ -42,6 +42,17 @@
 		"title": "Akun Sosial",
 		"caption": "Suka kepo? Jelajahi akun sosial saya."
 	}],
+	"dev": [{
+		"title": "Semua tentang Desain dan Algoritma",
+		"caption": "Hi! Saya adalah Wildan Mubarok dan saya adalah developer yang menyukai Desain dan membangun algoritma dibaliknya, mulai dari Web Front-End hingga Game Platform."
+	}, {
+		"title": "Blog",
+		"caption": "Artikel membahas seputar developing web dan game terkumpul disini",
+		"more": "Lihat Lebih banyak"
+	}, {
+		"title": "Akon Showcase",
+		"caption": "Showcase Web Front-End dan Art Lainnya"
+	}],
 	"pro": [{
 		"title": "Kontak Saya?",
 		"support": "Gunakan email ini untuk pertanyaan tentang produk dan project yang ada di GitHub, Unity Asset Store, maupun platform lain",
